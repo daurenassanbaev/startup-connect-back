@@ -1,0 +1,1000 @@
+2024-10-15T17:18:57.439+05:00  INFO 6087 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 6087 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T17:18:57.442+05:00  INFO 6087 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T17:18:58.652+05:00  INFO 6087 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T17:18:58.673+05:00  INFO 6087 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T17:18:58.673+05:00  INFO 6087 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T17:18:58.734+05:00  INFO 6087 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T17:18:58.735+05:00  INFO 6087 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1226 ms
+2024-10-15T17:18:59.612+05:00  INFO 6087 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T17:18:59.662+05:00  INFO 6087 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T17:18:59.713+05:00  INFO 6087 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T17:18:59.805+05:00  INFO 6087 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T17:18:59.807+05:00  INFO 6087 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T17:18:59.807+05:00  INFO 6087 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728994739804
+2024-10-15T17:18:59.814+05:00  INFO 6087 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T17:19:00.039+05:00  INFO 6087 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 3.255 seconds (process running for 4.213)
+2024-10-15T17:19:00.519+05:00  WARN 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error while fetching metadata with correlation id 2 : {notification-topic=LEADER_NOT_AVAILABLE}
+2024-10-15T17:19:00.524+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T17:19:00.708+05:00  WARN 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error while fetching metadata with correlation id 5 : {notification-topic=LEADER_NOT_AVAILABLE}
+2024-10-15T17:19:02.163+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T17:19:02.166+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:19:02.196+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-6b605c53-fb77-454a-8a37-c47df69c5c76
+2024-10-15T17:19:02.197+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:19:02.217+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-groupId-1-6b605c53-fb77-454a-8a37-c47df69c5c76', protocol='range'}
+2024-10-15T17:19:02.233+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 1: {consumer-groupId-1-6b605c53-fb77-454a-8a37-c47df69c5c76=Assignment(partitions=[notification-topic-0])}
+2024-10-15T17:19:02.344+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-groupId-1-6b605c53-fb77-454a-8a37-c47df69c5c76', protocol='range'}
+2024-10-15T17:19:02.347+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T17:19:02.350+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T17:19:02.363+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Found no committed offset for partition notification-topic-0
+2024-10-15T17:19:02.368+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Found no committed offset for partition notification-topic-0
+2024-10-15T17:19:02.382+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting offset for partition notification-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}.
+2024-10-15T17:19:02.405+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T17:27:16.574+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T17:27:16.589+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T17:27:16.595+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-6b605c53-fb77-454a-8a37-c47df69c5c76 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T17:27:16.598+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:27:16.599+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:27:16.599+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T17:27:16.619+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:27:16.619+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:27:16.677+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T17:27:16.677+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T17:27:16.677+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T17:27:16.678+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T17:27:16.685+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T17:27:16.694+05:00  INFO 6087 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T17:27:38.278+05:00  INFO 6424 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 6424 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T17:27:38.281+05:00  INFO 6424 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T17:27:39.653+05:00  INFO 6424 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T17:27:39.673+05:00  INFO 6424 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T17:27:39.674+05:00  INFO 6424 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T17:27:39.727+05:00  INFO 6424 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T17:27:39.728+05:00  INFO 6424 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1405 ms
+2024-10-15T17:27:40.449+05:00  INFO 6424 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T17:27:40.499+05:00  INFO 6424 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T17:27:40.555+05:00  INFO 6424 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T17:27:40.674+05:00  INFO 6424 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T17:27:40.675+05:00  INFO 6424 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T17:27:40.675+05:00  INFO 6424 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728995260672
+2024-10-15T17:27:40.678+05:00  INFO 6424 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T17:27:40.696+05:00  INFO 6424 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 3.068 seconds (process running for 4.093)
+2024-10-15T17:27:41.241+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T17:27:41.242+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T17:27:41.244+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:27:41.263+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-5f170b00-58ed-4255-bee3-3b7c4ae81461
+2024-10-15T17:27:41.263+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:27:41.268+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=3, memberId='consumer-groupId-1-5f170b00-58ed-4255-bee3-3b7c4ae81461', protocol='range'}
+2024-10-15T17:27:41.273+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 3: {consumer-groupId-1-5f170b00-58ed-4255-bee3-3b7c4ae81461=Assignment(partitions=[notification-topic-0])}
+2024-10-15T17:27:41.328+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=3, memberId='consumer-groupId-1-5f170b00-58ed-4255-bee3-3b7c4ae81461', protocol='range'}
+2024-10-15T17:27:41.329+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T17:27:41.332+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T17:27:41.346+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T17:27:41.348+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T17:36:45.988+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node -1 disconnected.
+2024-10-15T17:42:00.181+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T17:42:00.216+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T17:42:00.222+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-5f170b00-58ed-4255-bee3-3b7c4ae81461 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T17:42:00.228+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:42:00.228+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:42:00.229+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T17:42:00.265+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:42:00.265+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:42:00.321+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T17:42:00.321+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T17:42:00.322+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T17:42:00.322+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T17:42:00.347+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T17:42:00.353+05:00  INFO 6424 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T17:42:12.543+05:00  INFO 6933 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 6933 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T17:42:12.546+05:00  INFO 6933 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T17:42:13.897+05:00  INFO 6933 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T17:42:13.919+05:00  INFO 6933 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T17:42:13.920+05:00  INFO 6933 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T17:42:14.018+05:00  INFO 6933 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T17:42:14.020+05:00  INFO 6933 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1422 ms
+2024-10-15T17:42:15.022+05:00  INFO 6933 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T17:42:15.072+05:00  INFO 6933 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T17:42:15.146+05:00  INFO 6933 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T17:42:15.269+05:00  INFO 6933 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T17:42:15.270+05:00  INFO 6933 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T17:42:15.270+05:00  INFO 6933 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728996135268
+2024-10-15T17:42:15.273+05:00  INFO 6933 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T17:42:15.290+05:00  INFO 6933 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 3.281 seconds (process running for 4.184)
+2024-10-15T17:42:16.092+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T17:42:16.109+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T17:42:16.115+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:42:16.166+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-0c85323f-8455-431c-b96d-610786173511
+2024-10-15T17:42:16.167+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:42:16.172+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=5, memberId='consumer-groupId-1-0c85323f-8455-431c-b96d-610786173511', protocol='range'}
+2024-10-15T17:42:16.178+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 5: {consumer-groupId-1-0c85323f-8455-431c-b96d-610786173511=Assignment(partitions=[notification-topic-0])}
+2024-10-15T17:42:16.247+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=5, memberId='consumer-groupId-1-0c85323f-8455-431c-b96d-610786173511', protocol='range'}
+2024-10-15T17:42:16.250+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T17:42:16.253+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T17:42:16.267+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T17:42:16.271+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T17:44:37.758+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T17:44:37.763+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T17:44:37.764+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-0c85323f-8455-431c-b96d-610786173511 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T17:44:37.765+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:44:37.765+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:44:37.765+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T17:44:37.792+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:44:37.793+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:44:37.798+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T17:44:37.798+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T17:44:37.798+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T17:44:37.798+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T17:44:37.809+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T17:44:37.813+05:00  INFO 6933 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T17:44:45.738+05:00  INFO 7057 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 7057 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T17:44:45.741+05:00  INFO 7057 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T17:44:47.032+05:00  INFO 7057 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T17:44:47.047+05:00  INFO 7057 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T17:44:47.048+05:00  INFO 7057 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T17:44:47.092+05:00  INFO 7057 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T17:44:47.093+05:00  INFO 7057 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1309 ms
+2024-10-15T17:44:47.931+05:00  INFO 7057 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T17:44:48.020+05:00  INFO 7057 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T17:44:48.075+05:00  INFO 7057 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T17:44:48.170+05:00  INFO 7057 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T17:44:48.171+05:00  INFO 7057 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T17:44:48.171+05:00  INFO 7057 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728996288168
+2024-10-15T17:44:48.182+05:00  INFO 7057 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T17:44:48.203+05:00  INFO 7057 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 3.166 seconds (process running for 4.035)
+2024-10-15T17:44:48.950+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T17:44:48.951+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T17:44:48.968+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:44:49.067+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-0ceb947d-cfae-4f0a-8f55-193a3078a4e7
+2024-10-15T17:44:49.068+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T17:44:49.071+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=7, memberId='consumer-groupId-1-0ceb947d-cfae-4f0a-8f55-193a3078a4e7', protocol='range'}
+2024-10-15T17:44:49.081+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 7: {consumer-groupId-1-0ceb947d-cfae-4f0a-8f55-193a3078a4e7=Assignment(partitions=[notification-topic-0])}
+2024-10-15T17:44:50.037+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=7, memberId='consumer-groupId-1-0ceb947d-cfae-4f0a-8f55-193a3078a4e7', protocol='range'}
+2024-10-15T17:44:50.038+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T17:44:50.040+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T17:44:50.052+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T17:44:50.053+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T17:53:49.147+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node -1 disconnected.
+2024-10-15T17:57:06.472+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T17:57:06.538+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T17:57:06.554+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-0ceb947d-cfae-4f0a-8f55-193a3078a4e7 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T17:57:06.588+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:57:06.590+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:57:06.590+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T17:57:06.640+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T17:57:06.641+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T17:57:06.779+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T17:57:06.779+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T17:57:06.781+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T17:57:06.785+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T17:57:06.873+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T17:57:06.882+05:00  INFO 7057 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T18:39:12.166+05:00  INFO 8045 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 8045 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T18:39:12.172+05:00  INFO 8045 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T18:39:13.652+05:00  INFO 8045 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T18:39:13.717+05:00  INFO 8045 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T18:39:13.718+05:00  INFO 8045 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T18:39:13.903+05:00  INFO 8045 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T18:39:13.904+05:00  INFO 8045 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1687 ms
+2024-10-15T18:39:15.172+05:00  INFO 8045 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T18:39:15.239+05:00  INFO 8045 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T18:39:15.299+05:00  INFO 8045 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T18:39:15.452+05:00  INFO 8045 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T18:39:15.453+05:00  INFO 8045 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T18:39:15.453+05:00  INFO 8045 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1728999555450
+2024-10-15T18:39:15.457+05:00  INFO 8045 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T18:39:15.482+05:00  INFO 8045 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 4.056 seconds (process running for 6.281)
+2024-10-15T18:39:17.382+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T18:39:17.385+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T18:39:17.456+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T18:39:17.575+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-71079592-ac17-49fb-a8c8-6a130d1ab5d0
+2024-10-15T18:39:17.576+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T18:39:17.593+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=9, memberId='consumer-groupId-1-71079592-ac17-49fb-a8c8-6a130d1ab5d0', protocol='range'}
+2024-10-15T18:39:17.618+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 9: {consumer-groupId-1-71079592-ac17-49fb-a8c8-6a130d1ab5d0=Assignment(partitions=[notification-topic-0])}
+2024-10-15T18:39:17.637+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=9, memberId='consumer-groupId-1-71079592-ac17-49fb-a8c8-6a130d1ab5d0', protocol='range'}
+2024-10-15T18:39:17.639+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T18:39:17.647+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T18:39:17.855+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T18:39:17.857+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T19:46:29.703+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Disconnecting from node 0 due to request timeout.
+2024-10-15T19:46:29.745+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cancelled in-flight FETCH request with correlation id 306 due to node 0 being disconnected (elapsed time since creation: 3903479ms, elapsed time since send: 3903479ms, request timeout: 30000ms)
+2024-10-15T19:46:29.748+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-10-15T19:46:29.749+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T19:46:29.749+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Client requested disconnect from node 2147483647
+2024-10-15T19:46:29.748+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-groupId-1, groupId=groupId] Error sending fetch request (sessionId=1087383985, epoch=253) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-10-15T19:46:29.793+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T19:54:02.419+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-10-15T19:54:02.422+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T19:54:02.423+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Client requested disconnect from node 2147483647
+2024-10-15T19:54:02.428+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T19:54:02.429+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-10-15T19:54:02.429+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T19:54:02.545+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:01:20.894+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-10-15T20:01:20.934+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:01:20.934+05:00  INFO 8045 --- [notification-service] [kafka-coordinator-heartbeat-thread | groupId] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Client requested disconnect from node 2147483647
+2024-10-15T20:01:20.943+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:01:20.944+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-10-15T20:01:20.944+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:01:21.060+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:06:50.170+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node -1 disconnected.
+2024-10-15T20:20:21.154+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-groupId-1, groupId=groupId] Node -1 disconnected.
+2024-10-15T20:22:13.540+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.d.n.service.EmailSenderService         : Attempting to send email to test@gmail.com
+2024-10-15T20:22:19.512+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.d.n.service.EmailSenderService         : Email sent successfully to test@gmail.com
+2024-10-15T20:33:57.286+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T20:33:57.324+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T20:33:57.329+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-71079592-ac17-49fb-a8c8-6a130d1ab5d0 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T20:33:57.334+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:33:57.334+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:33:57.334+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T20:33:57.376+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:33:57.379+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:33:57.639+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T20:33:57.639+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T20:33:57.640+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T20:33:57.640+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T20:33:57.656+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T20:33:57.659+05:00  INFO 8045 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T20:36:53.198+05:00  INFO 9484 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 9484 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T20:36:53.202+05:00  INFO 9484 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T20:36:55.502+05:00  INFO 9484 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T20:36:55.703+05:00  INFO 9484 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T20:36:55.703+05:00  INFO 9484 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T20:36:55.801+05:00  INFO 9484 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T20:36:55.802+05:00  INFO 9484 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2487 ms
+2024-10-15T20:36:59.003+05:00  INFO 9484 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T20:36:59.090+05:00  INFO 9484 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T20:36:59.173+05:00  INFO 9484 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T20:36:59.308+05:00  INFO 9484 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T20:36:59.320+05:00  INFO 9484 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T20:36:59.321+05:00  INFO 9484 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1729006619305
+2024-10-15T20:36:59.330+05:00  INFO 9484 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T20:36:59.369+05:00  INFO 9484 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 7.082 seconds (process running for 8.463)
+2024-10-15T20:36:59.989+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T20:36:59.991+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:37:00.013+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T20:37:00.066+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-0a84953f-e81b-4c2d-b261-028d17153e5e
+2024-10-15T20:37:00.068+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T20:37:00.114+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=11, memberId='consumer-groupId-1-0a84953f-e81b-4c2d-b261-028d17153e5e', protocol='range'}
+2024-10-15T20:37:00.128+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 11: {consumer-groupId-1-0a84953f-e81b-4c2d-b261-028d17153e5e=Assignment(partitions=[notification-topic-0])}
+2024-10-15T20:37:00.186+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=11, memberId='consumer-groupId-1-0a84953f-e81b-4c2d-b261-028d17153e5e', protocol='range'}
+2024-10-15T20:37:00.189+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T20:37:00.204+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T20:37:00.253+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T20:37:00.257+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T20:44:32.158+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T20:44:32.222+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T20:44:32.240+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-0a84953f-e81b-4c2d-b261-028d17153e5e sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T20:44:32.252+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:44:32.252+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:44:32.253+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T20:44:32.313+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:44:32.314+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:44:32.463+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T20:44:32.464+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T20:44:32.464+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T20:44:32.465+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T20:44:32.503+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T20:44:32.510+05:00  INFO 9484 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped
+2024-10-15T20:45:05.074+05:00  INFO 9875 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Starting NotificationServiceApplication using Java 21.0.3 with PID 9875 (/Users/daurenassanbaev/IdeaProjects/microservices/notification-service/target/classes started by daurenassanbaev in /Users/daurenassanbaev/IdeaProjects/microservices)
+2024-10-15T20:45:05.078+05:00  INFO 9875 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-10-15T20:45:06.226+05:00  INFO 9875 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8777 (http)
+2024-10-15T20:45:06.244+05:00  INFO 9875 --- [notification-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-15T20:45:06.245+05:00  INFO 9875 --- [notification-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-15T20:45:06.308+05:00  INFO 9875 --- [notification-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-15T20:45:06.309+05:00  INFO 9875 --- [notification-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1160 ms
+2024-10-15T20:45:06.864+05:00  INFO 9875 --- [notification-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8777 (http) with context path '/'
+2024-10-15T20:45:06.917+05:00  INFO 9875 --- [notification-service] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2024-10-15T20:45:06.973+05:00  INFO 9875 --- [notification-service] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-10-15T20:45:07.054+05:00  INFO 9875 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-10-15T20:45:07.055+05:00  INFO 9875 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-10-15T20:45:07.055+05:00  INFO 9875 --- [notification-service] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1729007107053
+2024-10-15T20:45:07.058+05:00  INFO 9875 --- [notification-service] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Subscribed to topic(s): notification-topic
+2024-10-15T20:45:07.077+05:00  INFO 9875 --- [notification-service] [main] c.d.n.NotificationServiceApplication     : Started NotificationServiceApplication in 2.956 seconds (process running for 3.956)
+2024-10-15T20:45:07.552+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-groupId-1, groupId=groupId] Cluster ID: 5-9yaZRUTSGwYOgNvWqA_Q
+2024-10-15T20:45:07.553+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-10-15T20:45:07.555+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T20:45:07.583+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: need to re-join with the given member-id: consumer-groupId-1-0641ec85-dd64-484e-846b-edbfa89fcf10
+2024-10-15T20:45:07.585+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] (Re-)joining group
+2024-10-15T20:45:07.600+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully joined group with generation Generation{generationId=13, memberId='consumer-groupId-1-0641ec85-dd64-484e-846b-edbfa89fcf10', protocol='range'}
+2024-10-15T20:45:07.607+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Finished assignment for group at generation 13: {consumer-groupId-1-0641ec85-dd64-484e-846b-edbfa89fcf10=Assignment(partitions=[notification-topic-0])}
+2024-10-15T20:45:07.629+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Successfully synced group in generation Generation{generationId=13, memberId='consumer-groupId-1-0641ec85-dd64-484e-846b-edbfa89fcf10', protocol='range'}
+2024-10-15T20:45:07.630+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Notifying assignor about the new Assignment(partitions=[notification-topic-0])
+2024-10-15T20:45:07.632+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Adding newly assigned partitions: notification-topic-0
+2024-10-15T20:45:07.647+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition notification-topic-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}
+2024-10-15T20:45:07.649+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions assigned: [notification-topic-0]
+2024-10-15T20:47:06.042+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-groupId-1, groupId=groupId] Revoke previously assigned partitions notification-topic-0
+2024-10-15T20:47:06.049+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: partitions revoked: [notification-topic-0]
+2024-10-15T20:47:06.059+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Member consumer-groupId-1-0641ec85-dd64-484e-846b-edbfa89fcf10 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-10-15T20:47:06.061+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:47:06.061+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:47:06.061+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Unsubscribed all topics or patterns and assigned partitions
+2024-10-15T20:47:06.088+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-10-15T20:47:06.089+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-groupId-1, groupId=groupId] Request joining group due to: consumer pro-actively leaving the group
+2024-10-15T20:47:06.552+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-10-15T20:47:06.552+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-10-15T20:47:06.553+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-10-15T20:47:06.553+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-10-15T20:47:06.575+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-groupId-1 unregistered
+2024-10-15T20:47:06.578+05:00  INFO 9875 --- [notification-service] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : groupId: Consumer stopped

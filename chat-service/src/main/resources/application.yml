@@ -1,0 +1,27 @@
+spring:
+  application:
+    name:
+      websocket
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/sandbox
+  data:
+    mongodb:
+      username: dauren
+      password: dauren
+      host: localhost
+      port: 27017
+      database: chat_app
+      authentication-database: admin
+      uri: mongodb://localhost:27017
+server:
+  port: 8088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  file:
+    name: /Users/daurenassanbaev/IdeaProjects/microservices/chat-service/logs/chat-service-logs.log

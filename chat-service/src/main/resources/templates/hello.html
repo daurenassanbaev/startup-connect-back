@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+</head>
+<body>
+<h1>WebSocket Test</h1>
+<script>
+    const socket = new WebSocket('ws://localhost:8088/ws');
+    socket.onopen = () => console.log('Connected');
+    socket.onmessage = (event) => console.log('Message received:', event.data);
+    socket.onclose = () => console.log('Connection closed');
+</script>
+</body>
+</html>

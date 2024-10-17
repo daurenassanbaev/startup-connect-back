@@ -1,0 +1,36 @@
+spring:
+  application:
+    name:
+      ratings-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/sandbox
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/ratings_db
+    password: 'postgres'
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: 'true'
+      hibernate:
+        ddl-auto: validate
+      show-sql: 'true'
+  kafka:
+    bootstrap-servers: localhost:9092
+
+server:
+  port:
+    8085
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  file:
+    name: /Users/daurenassanbaev/IdeaProjects/microservices/ratings-service/logs/ratings-service-logs.log
+

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: apigw
+  cloud:
+    gateway:
+      routes:
+        - id: idea
+          uri: lb://IDEA-SERVICE
+          predicates:
+            - Path=/api/v1/ideas/**
+        - id: users
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+        - id: comment
+          uri: lb://COMMENT-SERVICE
+          predicates:
+            - Path=/api/v1/comments/**
+        - id: ratings
+          uri: lb://RATINGS-SERVICE
+          predicates:
+            - Path=/api/v1/ratings/**
+        - id: websocket
+          uri: lb://WEBSOCKET
+          predicates:
+            - Path=/api/v1/chat/**
+server:
+  port:
+    8084
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

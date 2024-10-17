@@ -1,0 +1,43 @@
+
+server:
+  port:
+    8083
+spring:
+  application:
+    name:
+      user-service
+  liquibase:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/photos
+    password: 'postgres'
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: 'true'
+      hibernate:
+        ddl-auto: validate
+      show-sql: 'true'
+keycloak:
+  realm: sandbox
+  domain: localhost:8080
+  adminCliendId: admin-cli
+  adminClientSecret: HdOzQ45nqftzwQ5UfMuoda04ObtJDCl9
+  client: idea-app
+  clientSecret: GzwXtfFVwI1YaQ7eDzyjTNFGKAmpTmJY
+  urls:
+    auth: http://${keycloak.domain}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  file:
+    name: /Users/daurenassanbaev/IdeaProjects/microservices/user-service/logs/user-service-logs.log

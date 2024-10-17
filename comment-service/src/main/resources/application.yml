@@ -1,0 +1,38 @@
+spring:
+  kafka:
+    bootstrap-servers:
+      localhost:9092
+  application:
+    name:
+      comment-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/sandbox
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/comments_db
+    password: 'postgres'
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: 'true'
+      hibernate:
+        ddl-auto: validate
+      show-sql: 'true'
+
+server:
+  port:
+    8086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  file:
+    name: /Users/daurenassanbaev/IdeaProjects/microservices/comment-service/logs/comment-service-logs.log
+
+

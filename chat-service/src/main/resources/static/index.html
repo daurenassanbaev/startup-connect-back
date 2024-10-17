@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script> <!-- Загрузка SockJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@6.0.0"></script> <!-- Загрузка StompJS -->
+</head>
+<body>
+<h1>Тест WebSocket</h1>
+<button id="sendMessage">Отправить сообщение</button>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const socket = new SockJS('http://localhost:8088/ws'); // URL вашего WebSocket
+        const stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, (frame) => {
+            console.log('Подключено: ' + frame);
+
+            document.getElementById('sendMessage').addEventListener('click', () => {
+                const message = {
+                    senderId: "user1",
+                    recipientId: "user2",
+                    content: "Hello from HTML page!"
+                };
+
+                stompClient.send("/app/chat", {}, JSON.stringify(message));
+                console.log('Сообщение отправлено:', message);
+            });
+        }, (error) => {
+            console.error('Ошибка подключения: ', error);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name:
+      notification-service
+  kafka:
+    bootstrap-servers: localhost:9092
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: sharinganyt430@gmail.com
+    password: hrszgevrmeezufqt
+    properties:
+      mail:
+        smtp:
+          auth:
+            true
+          starttls:
+            enable:
+              true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port:
+    8777
+from_email:
+  sharinganyt430@gmail.com
+logging:
+  file:
+    name: /Users/daurenassanbaev/IdeaProjects/microservices/notification-service/logs/notification-service-logs.log
+
+
