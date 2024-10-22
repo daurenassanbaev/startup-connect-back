@@ -14,7 +14,7 @@ spring:
       max-request-size: 5MB
   datasource:
     username: 'postgres'
-    url: jdbc:postgresql://localhost:5432/photos
+    url: jdbc:postgresql://postgres:5432/photos
     password: 'postgres'
     driver-class-name: org.postgresql.Driver
     jpa:
@@ -27,7 +27,7 @@ spring:
       show-sql: 'true'
 keycloak:
   realm: sandbox
-  domain: localhost:8080
+  domain: my_keycloak:8080
   adminCliendId: admin-cli
   adminClientSecret: HdOzQ45nqftzwQ5UfMuoda04ObtJDCl9
   client: idea-app
@@ -37,7 +37,7 @@ keycloak:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
 logging:
   file:
     name: /Users/daurenassanbaev/IdeaProjects/microservices/user-service/logs/user-service-logs.log

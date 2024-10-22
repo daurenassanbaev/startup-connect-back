@@ -84,7 +84,7 @@ public class CommentService {
         try {
             log.debug("Fetching idea details for ideaId {}", commentDto.getIdeaId());
             ResponseEntity<IdeaResponse> response = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/ideas/" + commentDto.getIdeaId(),
+                    "http://IDEA-SERVICE/api/v1/ideas/" + commentDto.getIdeaId(),
                     HttpMethod.GET,
                     entity,
                     IdeaResponse.class);
@@ -93,7 +93,7 @@ public class CommentService {
             log.debug("Fetching user details for userId {}", response.getBody().getUserId());
             HttpEntity<Void> entity1 = new HttpEntity<>(headers);
             ResponseEntity<String> userResponse = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/users/" + response.getBody().getUserId(),
+                    "http://USER-SERVICE/api/v1/users/" + response.getBody().getUserId(),
                     HttpMethod.GET,
                     entity1,
                     String.class

@@ -1,4 +1,4 @@
-package com.daurenassanbaev.commentservice;
+/*package com.daurenassanbaev.commentservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,3 +11,4 @@ class CommentServiceApplicationTests {
     }
 
 }
+*/

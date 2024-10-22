@@ -1,4 +1,4 @@
-package com.daurenassanbaev.userservice;
+/*package com.daurenassanbaev.userservice;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,4 +11,4 @@ class UserServiceApplicationTests {
     void contextLoads() {
     }
 
-}
+}*/

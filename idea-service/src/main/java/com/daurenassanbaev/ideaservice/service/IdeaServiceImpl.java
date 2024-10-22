@@ -54,7 +54,7 @@ public class IdeaServiceImpl implements IdeaService{
         log.info("Deleting file {} for user {}", filename, userId);
         try {
             restTemplate.exchange(
-                    "http://localhost:9090/api/v1/s3/" + filename,
+                    "http://AMAZON-S3-SERVICE/api/v1/s3/" + filename,
                     HttpMethod.DELETE,
                     null,
                     String.class
@@ -83,7 +83,7 @@ public class IdeaServiceImpl implements IdeaService{
                 HttpEntity<MultiValueMap<String, Object>> entity = new HttpEntity<>(body, headers);
 
                 ResponseEntity<String> result = restTemplate.exchange(
-                        "http://localhost:9090/api/v1/s3/upload",
+                        "http://AMAZON-S3-SERVICE/api/v1/s3/upload",
                         HttpMethod.POST,
                         entity,
                         String.class
@@ -154,7 +154,7 @@ public class IdeaServiceImpl implements IdeaService{
             HttpEntity<RatingDto> entity = new HttpEntity<>(ratingDto, headers);
 
             restTemplate.postForObject(
-                    "http://localhost:8084/api/v1/ratings",
+                    "http://RATINGS-SERVICE/api/v1/ratings",
                     entity,
                     RatingDto.class
             );
@@ -175,7 +175,7 @@ public class IdeaServiceImpl implements IdeaService{
             HttpEntity<Void> entity = new HttpEntity<>(headers);
 
             ResponseEntity<List<RatingDto>> response = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/ratings/{id}",
+                    "http://RATINGS-SERVICE/api/v1/ratings/{id}",
                     HttpMethod.GET,
                     entity,
                     new ParameterizedTypeReference<List<RatingDto>>() {},
@@ -199,7 +199,7 @@ public class IdeaServiceImpl implements IdeaService{
             HttpEntity<CommentDto> entity = new HttpEntity<>(commentDto, headers);
 
             restTemplate.postForObject(
-                    "http://localhost:8084/api/v1/comments",
+                    "http://COMMENT-SERVICE/api/v1/comments",
                     entity,
                     CommentDto.class
             );
@@ -220,7 +220,7 @@ public class IdeaServiceImpl implements IdeaService{
             HttpEntity<Void> entity = new HttpEntity<>(headers);
 
             ResponseEntity<List<CommentDto>> response = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/comments/{id}",
+                    "http://COMMENT-SERVICE/api/v1/comments/{id}",
                     HttpMethod.GET,
                     entity,
                     new ParameterizedTypeReference<List<CommentDto>>() {},

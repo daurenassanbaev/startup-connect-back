@@ -106,7 +106,7 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
                 HttpEntity<MultiValueMap<String, Object>> entity = new HttpEntity<>(body, headers);
 
                 ResponseEntity<String> result = restTemplate.exchange(
-                        "http://localhost:9090/api/v1/s3/upload",
+                        "http://AMAZON-S3-SERVICE/api/v1/s3/upload",
                         HttpMethod.POST,
                         entity,
                         String.class
@@ -192,7 +192,7 @@ public class KeycloakUserServiceImpl implements KeycloakUserService {
         log.info("Deleting photo with filename: {} for user ID: {}", filename, userId);
 
         restTemplate.exchange(
-                "http://localhost:9090/api/v1/s3/" + filename,
+                "http://AMAZON-S3-SERVICE/api/v1/s3/" + filename,
                 HttpMethod.DELETE,
                 null,
                 String.class

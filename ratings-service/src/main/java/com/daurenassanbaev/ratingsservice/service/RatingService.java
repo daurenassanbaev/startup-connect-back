@@ -68,7 +68,7 @@ public class RatingService {
             HttpEntity<RatingResponse> entity2 = new HttpEntity<>(rating, headers);
 
             restTemplate.exchange(
-                    "http://localhost:8084/api/v1/ideas",
+                    "http://IDEA-SERVICE:8084/api/v1/ideas",
                     HttpMethod.PUT,
                     entity2,
                     RatingResponse.class
@@ -103,7 +103,7 @@ public class RatingService {
 
             HttpEntity<Void> entity = new HttpEntity<>(headers);
             ResponseEntity<IdeaResponse> response = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/ideas/"+ratingDto.getIdeaId(),
+                    "http://IDEA-SERVICE/api/v1/ideas/"+ratingDto.getIdeaId(),
                     HttpMethod.GET,
                     entity,
                     IdeaResponse.class);
@@ -112,14 +112,14 @@ public class RatingService {
             HttpEntity<Void> entity1 = new HttpEntity<>(headers);
             var userId = response.getBody().getUserId();
             ResponseEntity<String> userResponse = restTemplate.exchange(
-                    "http://localhost:8084/api/v1/users/"+userId,
+                    "http://USER-SERVICE/api/v1/users/"+userId,
                     HttpMethod.GET,
                     entity1,
                     String.class
             );
 
             restTemplate.exchange(
-                    "http://localhost:8084/api/v1/ideas",
+                    "http://IDEA-SERVICE/api/v1/ideas",
                     HttpMethod.PUT,
                     entity2,
                     RatingResponse.class

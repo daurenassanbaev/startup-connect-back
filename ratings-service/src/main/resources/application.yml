@@ -6,10 +6,10 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/sandbox
+          issuer-uri: http://my_keycloak:8080/realms/sandbox
   datasource:
     username: 'postgres'
-    url: jdbc:postgresql://localhost:5432/ratings_db
+    url: jdbc:postgresql://postgres:5432/ratings_db
     password: 'postgres'
     driver-class-name: org.postgresql.Driver
     jpa:
@@ -21,7 +21,7 @@ spring:
         ddl-auto: validate
       show-sql: 'true'
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: my_kafka:9092
 
 server:
   port:
@@ -29,7 +29,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka-server:8761/eureka
 logging:
   file:
     name: /Users/daurenassanbaev/IdeaProjects/microservices/ratings-service/logs/ratings-service-logs.log
